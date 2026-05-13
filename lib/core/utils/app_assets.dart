@@ -1,3 +1,3 @@
 class AppImages {
-  static const String kLogo = 'assets/images/logo.svg';
+  static const String kLogo = 'assets/images/Logo.svg';
 }
