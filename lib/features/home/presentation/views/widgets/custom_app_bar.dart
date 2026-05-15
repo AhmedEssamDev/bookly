@@ -10,13 +10,13 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: REdgeInsets.symmetric(horizontal: 30, vertical: 40),
+      padding: REdgeInsets.symmetric(horizontal: 15, vertical: 40),
       child: Row(
         children: [
           SvgPicture.asset(
             AppImages.kLogo,
-            height: 24.h,
-            width: 24.w,
+            height: 16.h,
+            width: 75.w,
           ),
           const Spacer(),
           IconButton(
