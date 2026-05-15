@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextStyles {
   static var titleMediusm = TextStyle(
-    fontSize: 20.sp,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
   );
 }
