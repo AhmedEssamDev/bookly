@@ -16,12 +16,43 @@ class HomeViewBody extends StatelessWidget {
          children: [
           CustomAppBar(),
           FeaturedBooksListView(),
-          SizedBox(height: 20.h,),
+          SizedBox(height: 25.h,),
           Text('Best Seller',
-          style: AppTextStyles.titleMediusm,),
+          style: AppTextStyles.textStyle18,),
+          SizedBox(height: 25.h,),
+          BestSellerListViewItem(),
          ],
       ),
     );
   }
 }
 
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          height: 105.0.h,
+      width: 70.0.w,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r),
+        image: const DecorationImage(
+          image: NetworkImage(
+            'https://al-balsam.com/cdn/shop/files/opal-book.jpg?v=1760355766'
+           ),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+        Column(
+          children: [
+           
+          ],
+        )
+      ],
+    );
+  }
+}
