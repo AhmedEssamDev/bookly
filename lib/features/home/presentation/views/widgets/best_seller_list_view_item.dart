@@ -18,19 +18,23 @@ class BestSellerListViewItem extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 105.0.h,
-            width: 70.0.w,
-            decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.r),
-            image: const DecorationImage(
-            image: NetworkImage(
-              'https://al-balsam.com/cdn/shop/files/opal-book.jpg?v=1760355766'
-             ),
-            fit: BoxFit.fill,
+          SizedBox(
+              height: 105.0.h, 
+              child: AspectRatio(
+              aspectRatio: 2.6/4,
+              child: Container(
+                decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.r),
+                image: const DecorationImage(
+                image: NetworkImage(
+                  'https://al-balsam.com/cdn/shop/files/opal-book.jpg?v=1760355766'
+                 ),
+                fit: BoxFit.fill,
+              ),
+                      ),
+                    ),
+            ),
           ),
-        ),
-      ),
           SizedBox(width: 30.w,),
           Expanded(
             child: Column(
@@ -56,10 +60,9 @@ class BestSellerListViewItem extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   ),),
                   Spacer(),
-                  BookRating()
+                  BookRating(),
                 ],
-               ),
-              ],
+               ),                ],
             ),
           )
         ],
