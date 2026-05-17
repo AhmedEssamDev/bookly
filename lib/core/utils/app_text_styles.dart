@@ -27,4 +27,3 @@ abstract class AppTextStyles {
   );
 }
 
-const TextStyle textStyle = TextStyle();
