@@ -1,24 +1,29 @@
 import 'package:bookly/core/router/app_router_keys.dart';
 import 'package:bookly/features/home/presentation/views/book_details_view.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
+import 'package:bookly/features/search/presentation/views/search_view.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
-abstract class AppRouter{
+abstract class AppRouter {
   static final appRouter = GoRouter(
-  routes: [
-    GoRoute(
-      path: AppRouterKeys.splash,
-      builder: (context, state) => const SplashView(),
+    routes: [
+      GoRoute(
+        path: AppRouterKeys.splash,
+        builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-      path: AppRouterKeys.home,
-      builder: (context, state) => const HomeView(),
+        path: AppRouterKeys.home,
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
-      path: AppRouterKeys.bookDetails,
-      builder: (context, state) => const BookDetailsView(),
-      )
-  ],
-);
+        path: AppRouterKeys.bookDetails,
+        builder: (context, state) => const BookDetailsView(),
+      ),
+      GoRoute(
+        path: AppRouterKeys.search,
+        builder: (context, state) => const SearchView(),
+      ),
+    ],
+  );
 }
