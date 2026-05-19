@@ -2,12 +2,12 @@ import 'package:bookly/core/api/end_points.dart';
 import 'package:dio/dio.dart';
 
 class ApiService {
-  final Dio dio;
+  final Dio _dio;
 
-  ApiService(this.dio);
+  ApiService(this._dio);
 
   Future<Map<String, dynamic>> get({required String endPoint}) async {
-    var response = await dio.get('$EndPoints.baseURL$endPoint');
+    var response = await _dio.get('$EndPoints.baseURL');
     return response.data;
   }
 
