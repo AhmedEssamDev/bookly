@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.backgroundColor,
-   required this.textColor, this.borderRadius, required this.text, 
-   this.fontSize});
+  const CustomButton({
+    super.key,
+    required this.backgroundColor,
+    required this.textColor,
+    this.borderRadius,
+    required this.text,
+    this.fontSize,
+  });
   final Color backgroundColor;
   final Color textColor;
   final BorderRadius? borderRadius;
@@ -15,18 +20,23 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 48.h,
-      child: TextButton(onPressed: (){},
-      style: TextButton.styleFrom(
-        backgroundColor: backgroundColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: borderRadius ?? BorderRadius.circular(18.r)
-        )
+      child: TextButton(
+        onPressed: () {},
+        style: TextButton.styleFrom(
+          backgroundColor: backgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: borderRadius ?? BorderRadius.circular(18.r),
+          ),
+        ),
+        child: Text(
+          text,
+          style: AppTextStyles.textStyle18.copyWith(
+            color: textColor,
+            fontWeight: FontWeight.w900,
+            fontSize: fontSize,
+          ),
+        ),
       ),
-      child: Text(text,style: AppTextStyles.textStyle18.copyWith(
-        color: textColor,
-        fontWeight: FontWeight.w900,
-        fontSize: fontSize,
-      ),)),
     );
   }
 }

@@ -1,8 +1,8 @@
-
 import 'package:bookly/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
+
 abstract class AppTextStyles {
-    static const textStyle18 = TextStyle(
+  static const textStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
@@ -26,4 +26,3 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 }
-

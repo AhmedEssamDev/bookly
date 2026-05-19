@@ -17,7 +17,7 @@ class FeaturedBooksListView extends StatelessWidget {
             child: CustomBookImage(),
           );
         },
-       )
+      ),
     );
   }
 }

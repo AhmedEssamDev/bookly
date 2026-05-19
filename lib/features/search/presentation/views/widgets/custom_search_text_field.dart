@@ -12,22 +12,19 @@ class CustomSearchTextField extends StatelessWidget {
         enabledBorder: buildoutlineInputBorder(),
         focusedBorder: buildoutlineInputBorder(),
         hintText: 'Search',
-        suffixIcon:IconButton(
-            onPressed: () {},
-            icon:  Opacity(
-              opacity: 0.8,
-              child: FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22.r)),
+        suffixIcon: IconButton(
+          onPressed: () {},
+          icon: Opacity(
+            opacity: 0.8,
+            child: FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22.r),
           ),
+        ),
       ),
     );
   }
 }
 
-OutlineInputBorder buildoutlineInputBorder () => OutlineInputBorder(
-  borderRadius: BorderRadius.circular(
-    12.r,
-  ),
-  borderSide: const BorderSide(
-    color: Colors.white,
-  ),
+OutlineInputBorder buildoutlineInputBorder() => OutlineInputBorder(
+  borderRadius: BorderRadius.circular(12.r),
+  borderSide: const BorderSide(color: Colors.white),
 );

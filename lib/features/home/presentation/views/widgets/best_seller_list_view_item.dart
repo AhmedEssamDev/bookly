@@ -12,63 +12,68 @@ class BookListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouterKeys.bookDetails);
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-              height: 105.0.h, 
-              child: AspectRatio(
-              aspectRatio: 2.6/4,
+            height: 105.0.h,
+            child: AspectRatio(
+              aspectRatio: 2.6 / 4,
               child: Container(
                 decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.r),
-                image: const DecorationImage(
-                image: NetworkImage(
-                  'https://al-balsam.com/cdn/shop/files/opal-book.jpg?v=1760355766'
-                 ),
-                fit: BoxFit.fill,
-              ),
-                      ),
+                  borderRadius: BorderRadius.circular(10.r),
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      'https://al-balsam.com/cdn/shop/files/opal-book.jpg?v=1760355766',
                     ),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
             ),
           ),
-          SizedBox(width: 30.w,),
+          SizedBox(width: 30.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-               SizedBox(
-                width: 200.w,
-                 child: Text('Harry Potter and the Goblet of Fire',
-                 maxLines: 2,
-                 overflow: TextOverflow.ellipsis,
-                 style: AppTextStyles.textStyle20.copyWith(
-                 fontFamily: kGtSectraFine,
-                 ),),
-               ),
-               SizedBox(height: 3.h,),
-               Text('J.K. Rowling',
-               style: AppTextStyles.textStyle14.copyWith()), 
-               SizedBox(height: 3.h,),
-               Row(
-                children: [
-                  Text('19.99 €',
-                  style: AppTextStyles.textStyle20.copyWith(
-                  fontWeight: FontWeight.bold,
-                  ),),
-                  Spacer(),
-                  BookRating(),
-                ],
-               ),                ],
+                SizedBox(
+                  width: 200.w,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyles.textStyle20.copyWith(
+                      fontFamily: kGtSectraFine,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 3.h),
+                Text(
+                  'J.K. Rowling',
+                  style: AppTextStyles.textStyle14.copyWith(),
+                ),
+                SizedBox(height: 3.h),
+                Row(
+                  children: [
+                    Text(
+                      '19.99 €',
+                      style: AppTextStyles.textStyle20.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Spacer(),
+                    BookRating(),
+                  ],
+                ),
+              ],
             ),
-          )
+          ),
         ],
       ),
     );
   }
 }
-
-
