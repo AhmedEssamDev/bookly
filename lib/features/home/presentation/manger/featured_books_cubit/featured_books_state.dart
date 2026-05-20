@@ -14,6 +14,6 @@ final class FeaturedBooksSuccess extends FeaturedBooksState {
   const FeaturedBooksSuccess(this.books);
 }
 final class FeaturedBooksFailure extends FeaturedBooksState {
-  final String error;
-  const FeaturedBooksFailure(this.error);
+  final String errorMsg;
+  const FeaturedBooksFailure(this.errorMsg);
 }
