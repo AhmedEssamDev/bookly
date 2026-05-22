@@ -17,21 +17,25 @@ class FeaturedBooksListView extends StatelessWidget {
           return SizedBox(
             height: 224.0.h,
             child: ListView.builder(
+              itemCount: state.books.length,
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: REdgeInsets.only(right: 15.0),
-                  child: CustomBookImage(),
+                  child: CustomBookImage(
+                    imageURL:
+                        state.books[index].volumeInfo.imageLinks?.thumbnail,
+                  ),
                 );
               },
             ),
           );
-        }else if (state is FeaturedBooksFailure) {
+        } else if (state is FeaturedBooksFailure) {
           return CustomErrorWidget(errorMessage: state.errorMsg);
-        }else{
+        } else {
           return const CustomLoadingIndicator();
         }
-       
       },
     );
   }

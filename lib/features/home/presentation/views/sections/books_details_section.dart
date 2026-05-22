@@ -15,7 +15,9 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         const CustomBookDetailsAppBar(),
         SizedBox(height: 25.h),
-        SizedBox(height: 243.h, child: CustomBookImage()),
+        SizedBox(height: 243.h, child: CustomBookImage(
+          imageURL:'https://upload.wikimedia.org/wikipedia/ar/thumb/0/00/%D8%BA%D9%84%D8%A7%D9%81_%D8%B1%D9%88%D8%A7%D9%8A%D8%A9_%D8%A3%D9%85%D8%A7%D8%B1%D9%8A%D8%AA%D8%A7.jpeg/250px-%D8%BA%D9%84%D8%A7%D9%81_%D8%B1%D9%88%D8%A7%D9%8A%D8%A9_%D8%A3%D9%85%D8%A7%D8%B1%D9%8A%D8%AA%D8%A7.jpeg'
+        )),
         SizedBox(height: 30.h),
         const Text('The Jungle Book', style: AppTextStyles.textStyle30),
         SizedBox(height: 4.h),
