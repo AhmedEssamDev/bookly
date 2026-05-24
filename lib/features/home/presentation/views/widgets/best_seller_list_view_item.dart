@@ -15,7 +15,7 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouterKeys.bookDetails);
+        GoRouter.of(context).push(AppRouterKeys.bookDetails, extra: book);
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,8 @@ class BookListViewItem extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    BookRating(),
+                    BookRating(rating: book.volumeInfo.averageRating ?? 0.0,
+                     count: book.volumeInfo.ratingsCount ?? 0),
                   ],
                 ),
               ],

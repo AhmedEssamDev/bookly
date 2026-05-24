@@ -7,9 +7,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class BookRating extends StatelessWidget {
   const BookRating({
     super.key,
-    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.mainAxisAlignment = MainAxisAlignment.start, required this.rating, required this.count,
   });
   final MainAxisAlignment mainAxisAlignment;
+  final num rating;
+  final num count;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,12 +20,12 @@ class BookRating extends StatelessWidget {
         FaIcon(FontAwesomeIcons.solidStar, color: AppColors.kStar, size: 14.sp),
         SizedBox(width: 6.3.w),
 
-        Text('4.8', style: AppTextStyles.textStyle16),
+        Text('$rating', style: AppTextStyles.textStyle16),
         SizedBox(width: 5.w),
         Opacity(
           opacity: 0.5,
           child: Text(
-            '(252)',
+            '($count)',
             style: AppTextStyles.textStyle14.copyWith(
               fontWeight: FontWeight.w600,
             ),
