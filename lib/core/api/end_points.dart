@@ -8,5 +8,8 @@ abstract class EndPoints {
   //     'volumes?q=subject:egypt&Sorting=relevance&key=AIzaSyCVuDAEFOYaQkT4VXbQp5iw5HL0yUev_kc&Filtering=free-ebooks&sorting=newest';
   static  String similar({required String category}) =>
       'volumes?q=subject:$category&Sorting=relevance&key=AIzaSyCVuDAEFOYaQkT4VXbQp5iw5HL0yUev_kc&Filtering=free-ebooks&sorting=newest';
+
+  static String searchBooks({required String searchQuery}) =>
+      'volumes?q=$searchQuery&key=AIzaSyCVuDAEFOYaQkT4VXbQp5iw5HL0yUev_kc&Filtering=free-ebooks';
 }
 
