@@ -1,6 +1,6 @@
 import 'package:bookly/core/dependency%20injection/service_locator.dart';
 import 'package:bookly/core/router/app_router_keys.dart';
-import 'package:bookly/features/home/data/models/book_model/book_model.dart';
+import 'package:bookly/core/models/book_model/book_model.dart';
 import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
 import 'package:bookly/features/home/presentation/manger/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly/features/home/presentation/views/book_details_view.dart';
