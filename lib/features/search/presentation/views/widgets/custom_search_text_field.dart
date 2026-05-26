@@ -3,17 +3,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomSearchTextField extends StatelessWidget {
-  const CustomSearchTextField({super.key});
-
+  const CustomSearchTextField({super.key, required this.controller, required this.onSearch});
+  final TextEditingController controller;
+  final void Function(String query) onSearch;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      onChanged: onSearch,
       decoration: InputDecoration(
         enabledBorder: buildoutlineInputBorder(),
         focusedBorder: buildoutlineInputBorder(),
         hintText: 'Search',
         suffixIcon: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            controller.clear();
+          },
           icon: Opacity(
             opacity: 0.8,
             child: FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22.r),

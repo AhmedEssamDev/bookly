@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchViewBody extends StatelessWidget {
-  const SearchViewBody({super.key});
-
+  const SearchViewBody({super.key, required this.controller, required this.onSearch});
+   final TextEditingController controller;
+  final void Function(String) onSearch;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +16,10 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomSearchTextField(),
+          CustomSearchTextField(
+            controller: controller,
+            onSearch: onSearch,
+          ),
           SizedBox(height: 18.h),
           Text('Search Result', style: AppTextStyles.textStyle18),
           SizedBox(height: 16.h),

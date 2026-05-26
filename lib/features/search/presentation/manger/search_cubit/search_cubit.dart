@@ -5,16 +5,16 @@ import 'package:equatable/equatable.dart';
 
 part 'search_state.dart';
 
-class SearchCubitCubit extends Cubit<SearchCubitState> {
-  SearchCubitCubit({required this.searchRepo}) : super(SearchCubitInitial());
+class SearchCubit extends Cubit<SearchState> {
+  SearchCubit({required this.searchRepo}) : super(SearchInitial());
   final SearchRepo searchRepo;
   Future fetchSearchBooks({required String searchValue}) async {
-    emit(SearchCubitLoading());
+    emit(SearchLoading());
     var result = await searchRepo.fetchSearchedBooks(searchQuery: searchValue);
     result.fold((failure) {
-      emit(SearchCubitFailure(failure.errorMsg));
+      emit(SearchFailure(failure.errorMsg));
     }, (books) {
-      emit(SearchCubitSuccess(books));
+      emit(SearchSuccess(books));
     });
   }
 }

@@ -1,19 +1,19 @@
 part of 'search_cubit.dart';
 
-sealed class SearchCubitState extends Equatable {
-  const SearchCubitState();
+sealed class SearchState extends Equatable {
+  const SearchState();
 
   @override
   List<Object> get props => [];
 }
 
-final class SearchCubitInitial extends SearchCubitState {}
-final class SearchCubitLoading extends SearchCubitState {}
-final class SearchCubitSuccess extends SearchCubitState {
+final class SearchInitial extends SearchState {}
+final class SearchLoading extends SearchState {}
+final class SearchSuccess extends SearchState {
   final List<BookModel> books;
-  const SearchCubitSuccess(this.books);
+  const SearchSuccess(this.books);
 }
-final class SearchCubitFailure extends SearchCubitState {
+final class SearchFailure extends SearchState {
   final String errorMsg;
-  const SearchCubitFailure(this.errorMsg);
+  const SearchFailure(this.errorMsg);
 }

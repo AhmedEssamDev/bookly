@@ -9,7 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({super.key, required this.book});
+  const BookListViewItem({super.key, required this.book,});
   final BookModel book;
   @override
   Widget build(BuildContext context) {
