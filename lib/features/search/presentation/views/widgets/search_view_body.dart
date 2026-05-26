@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key, required this.controller, required this.onSearch});
    final TextEditingController controller;
-  final void Function(String) onSearch;
+   final void Function(String) onSearch;
   @override
   Widget build(BuildContext context) {
     return Padding(

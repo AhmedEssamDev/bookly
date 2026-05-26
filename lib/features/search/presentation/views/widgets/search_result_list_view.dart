@@ -14,6 +14,7 @@ class SearchResultListView extends StatelessWidget {
       builder: (context, state) {
         if (state is SearchSuccess) {
           return ListView.builder(
+            physics: const BouncingScrollPhysics(),
             itemCount: state.books.length,
             itemBuilder: (context, index) {
               final book = state.books[index];
